@@ -9,8 +9,16 @@ This project contains a set of Node.js scripts designed to update video URLs for
 2.  **Install Dependencies**: Open your terminal in the project directory and run the following command to install the required MongoDB driver:
 
     ```bash
-    npm install mongodb
+    npm install mongodb dotenv
     ```
+
+3.  **Create an Environment File**: Before running any scripts, you need to create a `.env` file in the root of the project to store your MongoDB connection string. You can do this by copying the example file:
+
+    ```bash
+    cp .env.example .env
+    ```
+
+    Next, open the `.env` file and replace the placeholder with your actual MongoDB connection URI.
 
 ## Workflow for Generating Commands
 

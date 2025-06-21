@@ -1,3 +1,4 @@
+require('dotenv').config();
 const { MongoClient } = require("mongodb");
 
 // Function to display usage instructions
@@ -18,7 +19,7 @@ Parameters:
 
 async function updateById() {
   // MongoDB configuration
-  const mongoUri = "mongodb+srv://hullagri:tESUl2VZDGklo1Io@schemes.4it1g.mongodb.net/?retryWrites=true&w=majority&appName=Schemes";
+  const mongoUri = process.env.MONGO_URI;
   const dbName = "Hull_Schemes";
   const collectionName = "All_agri";
 
