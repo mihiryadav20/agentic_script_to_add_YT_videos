@@ -12,6 +12,14 @@ This project contains a set of Node.js scripts designed to update video URLs for
     npm install mongodb
     ```
 
+## Workflow for Generating Commands
+
+This is the general process for preparing and running the update commands:
+
+1.  **Download Excel Sheets**: Obtain the Excel sheets that contain the slugs and the corresponding video URLs for each language.
+2.  **Analyze with Grok 3**: Use a large language model like Grok 3 to analyze the contents of the Excel sheets. The goal is to parse the data and structure it correctly for the command line.
+3.  **Generate Commands**: Based on the analysis, generate the complete `node` command for each slug, ensuring the video URLs are in the correct order as specified below.
+
 ## How to Update Video URLs
 
 The main script for updating video URLs is `updateVideosBySlug.js`. It takes a document's slug and a series of video URLs as command-line arguments.
